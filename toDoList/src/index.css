@@ -1,0 +1,123 @@
+@keyframes floatUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes moveUpDown {
+  0%,50%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-0.04em);
+  }
+    75% {
+        transform: translateY(0.04em);
+    }
+}
+
+html{
+  background-color: #05091b;
+  color: aliceblue;
+  box-sizing: border-box;
+}
+
+button{
+  color: aliceblue;
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: rgba(13, 24, 74, 0.9);
+  transition: background-color 0.5s ease;
+}
+
+button:hover{
+  background-color: rgba(13, 24, 74, 0.6);
+}
+
+input[type="text"]{
+  font-size: 1.7rem;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  background-color: rgba(13, 24, 74, 0.9);
+  color: aliceblue;
+  border: none;
+}
+
+.textAdder{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  gap: 0.5em;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 0.5em;
+  border-radius: 20px;
+  animation: floatUp 1s;
+}
+
+li .text {
+  flex: 1;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 550;
+}
+
+li button {
+  margin-left: 0.5em;
+}
+
+li.moved-up {
+  animation: floatUp 1s;
+}
+
+li.moved-down {
+  animation: floatUp 1s reverse;
+}
+
+.hHolder {
+  width: 100%;
+  padding-top: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.to-do-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+p {
+  display: inline;
+  margin: 0 0.1em;
+  font-family: Arial, sans-serif;
+  font-size: 6em;
+  animation: moveUpDown 6s infinite linear;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.33);
+}
+
+.hF {
+  animation-delay: 0s;
+}
+
+.hS {
+  animation-delay: 1s;
+}
+
+.hT {
+  animation-delay: 2s;
+}
